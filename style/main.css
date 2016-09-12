@@ -1,0 +1,67 @@
+@font-face{
+    font-family: Roboto Condensed;
+    src: url(../bootstrap/fonts/roboto.ttf);
+}
+
+html, body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.img{
+    background-color: #008000;
+    cursor: pointer;
+}
+
+.img:hover{
+    background: #24CC70;
+}
+
+.img .imgbg{
+    background: url('/images/cartbgFFFmini.png');
+    width: 50px;
+    height: 50px;
+}
+
+.products{
+    margin-bottom: 25px;
+}
+
+.info-block{
+    background-color: #FFFFFF;
+}
+
+.search{
+    margin-top:10px;
+}
+
+.container {
+    margin-top: 20px;
+}
+.pagination {
+    display: inline-block;
+}
+.pagination:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.pagination li {
+    cursor: pointer;
+}
+.pagination-wrap {
+    text-align: center;
+}
+
+.img-product{
+
+}
+
+@media all and (max-width: 700px){
+    .about-product h1{
+        font-size: 18px;
+    }
+}
+
+.table-body-options tr td{
+    vertical-align: middle;
+}

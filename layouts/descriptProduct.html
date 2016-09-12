@@ -1,0 +1,101 @@
+<div class="container about-product">
+    <div class="products">
+        <a ui-sref="main">Главная</a><a href="/">Феминизированые</a><span>{{productIdCtrl.product.name_products}}</span>
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <div class="img-product">
+                    <img ng-src="images/{{productIdCtrl.product.img}}" class="img-responsive"  title="" alt="" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+               <div>
+                   <h1>{{productIdCtrl.product.name_products}}</h1>
+               </div>
+                <div class="col-lg-7 col-md-3 col-sm-3  col-xs-1 ">
+                    <table class="table col-lg-1 col-md-1 col-sm-1 col-xs-1 bg-info" >
+                        <thead >
+                            <th class="bg-primary">
+                                Характеристики сорта
+                            </th>
+                        </thead>
+
+                        <tbody class="col-lg-1 col-md-1 col-sm-1 col-xs-1 bg-info table-body-options">
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr3.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.type}}
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr2.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.sex}}
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr1.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.genotype}}
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/genetics2.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.genetic}}
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr7.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.tgk}} %
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr4.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.bloom}} %
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/attr5.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.hight}} см
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/mouth.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.taste}}
+                                </td>
+                            </tr>
+                            <tr class="bg-info">
+                                <td>
+                                    <img ng-src="images/icons/male172.png" />
+                                </td>
+                                <td>
+                                    {{productIdCtrl.product.options.effect}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

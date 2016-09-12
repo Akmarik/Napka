@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-class="{active: isActive('/home')}"><a ui-sref="/home">Home</a></li>
+                <li ng-class="{active: isActive('/about')}"><a ui-sref="main.about">About</a></li>
+                <li ng-class="{active: isActive('/contact')}"><a ui-sref="main.contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Семена<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Феминизированные</a></li>
+                        <li><a href="#">Медицинские сорта</a></li>
+                        <li><a href="#">Фотопериодичные</a></li>
+                        <li><a href="#">Автоцветущие</a></li>
+                        <li><a href="#">Сатива</a></li>
+                        <li><a href="#">Индика</a></li>
+                        <li><a href="#">Гиганты</a></li>
+                        <li><a href="#">Урожайные</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

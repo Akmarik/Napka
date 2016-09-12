@@ -1,0 +1,72 @@
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="search">
+                    <input type="text" ng-model="search" placeholder="Search" />
+                </li>
+                <li ng-class="{active: isActive('/home')}"><a ui-sref="main">Home</a></li>
+                <li ng-class="{active: isActive('about')}"><a ui-sref="main.about">About</a></li>
+                <li ng-class="{active: isActive('contact')}"><a ui-sref="main.contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Семена<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Феминизированные</a></li>
+                        <li><a href="#">Медицинские сорта</a></li>
+                        <li><a href="#">Фотопериодичные</a></li>
+                        <li><a href="#">Автоцветущие</a></li>
+                        <li><a href="#">Сатива</a></li>
+                        <li><a href="#">Индика</a></li>
+                        <li><a href="#">Гиганты</a></li>
+                        <li><a href="#">Урожайные</a></li>
+                    </ul>
+                </li>
+                <li ng-class="{active: isActive('contact')}"><a ui-sref="main.cart">Cart</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content wrapper-content">
+    <div class="container">
+        <div ng-if="isActive('/')">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="products col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="product in products | filter:search" >
+                        <div class="imag-container">
+                            <a ui-sref="main.product({id:product['id']})"><img ng-src="images/{{product.img}}" class="img-responsive" title="" alt="" /></a>
+                        </div>
+                        <div class="desc clearfix">
+                            <div class="desc info-block">
+                                <div class="text-center"><h4>{{product.name_products}}</h4></div>
+                                <div class="pull-left lead">ТГК: {{product.tgk}}%</div>
+                                <div class="pull-right test">
+                                    <div class="pull-left lead">{{product.price | currency}}</div>
+                                    <div class="img-circle pull-right img" ng-click="addToCart(product.id);"><div class="img-circle img-responsive imgbg"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button ng-click="mainCtrl.addToCart(product)">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="pagination-wrap" style="margin-top: 100px;">
+                    <ul class="pagination">
+                        <li ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active': currentPageNum() == page.link}"><a ng-bind-html="page.name"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div ui-view></div>
+    </div>
+</div>
+
